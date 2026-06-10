@@ -1,0 +1,13 @@
+.cache/
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+*~
+
+.config/pulse/
+.config/dconf/
+.config/menus/
+.config/session/
+.config/autostart/

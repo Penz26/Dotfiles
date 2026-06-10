@@ -1,0 +1,89 @@
+/*    GRUVBOX DARK PALETTE
+      --------------------	
+
+@define-color bg        #282828;
+@define-color gray1     #928374;
+@define-color red1      #cc241d;
+@define-color red2      #fb4934;
+@define-color green1    #98971a;
+@define-color green2    #b8bb26;
+@define-color yellow1   #d79921;
+@define-color yellow2   #fabd2f;
+@define-color blue1     #458588;
+@define-color blue2     #83a598;
+@define-color purple1   #b16286;
+@define-color purple2   #d3869b;
+@define-color aqua1     #689d6a;
+@define-color aqua2     #8ec07c;
+@define-color gray2     #a89984;
+@define-color fg        #ebdbb2;
+@define-color bg0_h     #1d2021;
+@define-color bg0       @bg;
+@define-color bg1       #3c3836;
+@define-color bg2       #504945;
+@define-color bg3       #665c54;
+@define-color bg4       #7c6f64;
+@define-color bg-gray   @gray1;
+@define-color bg0_s     #32302f;
+@define-color fg4       #a89984;
+@define-color fg3       #bdae93;
+@define-color fg2       #d5c4a1;
+@define-color fg1       @fg;
+@define-color fg0       #fbf1c7;
+@define-color orange1   #d65d0e;
+@define-color orange2   #af3a03;
+*/
+
+/*    GRUVBOX LIGHT PALETTE
+      ---------------------   */  
+@define-color bg        #fbf1c7;
+@define-color gray1     #928374;
+@define-color red1      #cc241d;
+@define-color red2      #9d0006;
+@define-color green1    #98971a;
+@define-color green2    #79740e;
+@define-color yellow1   #d79921;
+@define-color yellow2   #b57614;
+@define-color blue1     #458588;
+@define-color blue2     #076678;
+@define-color purple1   #b16286;
+@define-color purple2   #8f3f71;
+@define-color aqua1     #689d6a;
+@define-color aqua2     #427b58;
+@define-color gray2     #7c6f64;
+@define-color fg        #3c3836;
+@define-color bg0_h     #f9f5d7;
+@define-color bg0       @bg;
+@define-color bg1       #ebdbb2;
+@define-color bg2       #d5c4a1;
+@define-color bg3       #bdae93;
+@define-color bg4       #a89984;
+@define-color bg-gray   @gray1;
+@define-color bg0_s     #f2e5bc;
+@define-color fg4       #7c6f64;
+@define-color fg3       #665c54;
+@define-color fg2       #504945;
+@define-color fg1       @fg;
+@define-color fg0       #282828;
+@define-color orange1   #d65d0e;
+@define-color orange2   #af3a03;
+
+
+/*	COLOR BINDS
+	-----------			*/
+@define-color waybar            @bg;
+@define-color text-main         @fg;
+@define-color text-opposite     @bg;
+@define-color text-alert        @red2;
+@define-color alert             @red1;
+@define-color warning           @orange1;
+@define-color ok                @aqua2;
+@define-color workspaces        @yellow1;
+@define-color workspaces-hover  @yellow2;
+@define-color day               @orange1;
+@define-color time              @orange2;
+@define-color date              @orange1;
+@define-color backlight         @bg-gray;
+@define-color network           @bg4;
+@define-color audio             @bg3;
+@define-color battery           @bg2;

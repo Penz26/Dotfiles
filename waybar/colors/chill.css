@@ -1,0 +1,52 @@
+/* CHILL SUMMER PASTEL (HIGH CONTRAST)
+      ---------------------------------- */  
+@define-color bg        #f4f1ea; /* Sfondo crema caldo solare */
+@define-color gray1     #8a9597; 
+@define-color red1      #c85a53; /* Rosso corallo scuro */
+@define-color red2      #a63e38;
+@define-color green1    #4a7c59; /* Verde salvia profondo (ottimo contrasto) */
+@define-color green2    #325a3e;
+@define-color yellow1   #b58d3d; /* Ocra/Girasole scuro */
+@define-color yellow2   #8c6928;
+@define-color blue1     #3b6b88; /* Blu carta da zucchero scuro */
+@define-color blue2     #254b62;
+@define-color purple1   #685373; /* Viola lavanda scuro e profondo */
+@define-color purple2   #4e3b56;
+@define-color aqua1     #4f8c82; /* Acquamarina scuro */
+@define-color aqua2     #35635c;
+@define-color gray2     #707a7c;
+@define-color fg        #2b3531; /* Testo principale grigio foresta scuro */
+@define-color bg0_h     #e8e4d7; /* Struttura della barra leggermente più scura */
+@define-color bg0       @bg;
+@define-color bg1       #dfd9c8;
+@define-color bg2       #d2caa7;
+@define-color bg3       #c5ba96;
+@define-color bg4       #b8ab85;
+@define-color bg-gray   @gray1;
+@define-color bg0_s     #ded9ca;
+@define-color fg4       #68756f;
+@define-color fg3       #4e5b55;
+@define-color fg2       #39453f;
+@define-color fg1       @fg;
+@define-color fg0       #161d1a;
+@define-color orange1   #be5a38; /* Arancione terracotta/mattone scuro */
+@define-color orange2   #964328; /* Arancione argilla scuro */
+
+/*	COLOR BINDS (Massima leggibilità al centro)
+	-----------			*/
+@define-color waybar            @bg0_h;
+@define-color text-main         @fg;
+@define-color text-opposite     #ffffff;
+@define-color text-alert        @red1;
+@define-color alert             @red2;
+@define-color warning           @orange1;
+@define-color ok                @green1;
+@define-color workspaces        @green1;  /* Workspace: Verde erba scuro */
+@define-color workspaces-hover  @orange1; /* Hover: Terracotta */
+@define-color day               @purple1; /* Giorno: Lavanda profonda (ora si legge!) */
+@define-color time              @orange2; /* Ora: Tramonto d'argilla scuro (ora si legge!) */
+@define-color date              @blue1;   /* Data: Carta da zucchero scuro (ora si legge!) */
+@define-color backlight         @yellow1; /* Retroilluminazione: Ocra */
+@define-color network           @bg4;
+@define-color audio             @bg3;
+@define-color battery           @bg2;
