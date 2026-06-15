@@ -1,7 +1,8 @@
-/*style_11*/
+/* ~/.config/wofi/style.css */
+@import "/home/penna/.config/wofi/colore-attuale.css";
 
 * {
-    font-family: "Font Awesome 5 Free", Roboto, Helvetica, Arial, sans-serif;
+    font-family: "JetBrainsMono Nerd Font", "Font Awesome 5 Free", Roboto, Helvetica, Arial, sans-serif;
     font-size: 14px;
     border: none;
 }
@@ -11,23 +12,23 @@
 }
 
 #outer-box {
-    background-color: #504945; 
-    border: 1px solid #d65d0e; 
+    background-color: @wofi-bg;       /* Sfondo strutturale dinamico */
+    border: 2px solid @wofi-accent;   /* Accento dinamico per il bordo */
     border-radius: 12px;
     margin: 10px;
     padding: 15px;
 }
 
 #input {
-    background-color: #3c3836; 
-    color: #ebdbb2;           
+    background-color: @wofi-input;    /* Campo di input dinamico */
+    color: @fg;                   
     padding: 8px 12px;
     margin-bottom: 10px;
     border-radius: 6px;
 }
 
 #input:focus {
-    box-shadow: 0 0 0 1px #d65d0e;
+    box-shadow: 0 0 0 2px @wofi-accent; 
 }
 
 #scroll {
@@ -37,16 +38,16 @@
 #entry {
     padding: 8px;
     border-radius: 6px;
-    color: #ebdbb2;
+    color: @fg;
     background-color: transparent;
 }
 
 #entry:selected {
-    background-color: #d65d0e; 
+    background-color: @wofi-accent;   /* Barra di selezione dinamica */
 }
 
 #text:selected {
-    color: #3c3836;            
+    color: @text-opposite;            /* Testo invertito per massima leggibilità */
 }
 
 #text {

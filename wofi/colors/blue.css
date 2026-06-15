@@ -50,3 +50,8 @@
 @define-color network           @bg3;
 @define-color audio             @bg2;
 @define-color battery           @bg1;
+
+/* Aggiungi in fondo a ~/.config/waybar/colors/blue.css */
+@define-color wofi-bg      @bg2;
+@define-color wofi-input   @bg1;
+@define-color wofi-accent  @blue1; /* Accento Blu profondo */

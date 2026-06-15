@@ -50,3 +50,8 @@
 @define-color network           @bg4;
 @define-color audio             @bg3;
 @define-color battery           @bg2;
+
+/* Aggiungi in fondo a ~/.config/waybar/colors/chill.css */
+@define-color wofi-bg      @bg0_h; /* Struttura crema caldo */
+@define-color wofi-input   @bg1;
+@define-color wofi-accent  @purple1; /* Accento Lavanda profondo (super rilassante!) */

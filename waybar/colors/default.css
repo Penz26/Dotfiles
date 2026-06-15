@@ -1,6 +1,6 @@
 /*    GRUVBOX DARK PALETTE
       --------------------	
-
+*/
 @define-color bg        #282828;
 @define-color gray1     #928374;
 @define-color red1      #cc241d;
@@ -32,10 +32,10 @@
 @define-color fg0       #fbf1c7;
 @define-color orange1   #d65d0e;
 @define-color orange2   #af3a03;
-*/
+
 
 /*    GRUVBOX LIGHT PALETTE
-      ---------------------   */  
+      ---------------------     
 @define-color bg        #fbf1c7;
 @define-color gray1     #928374;
 @define-color red1      #cc241d;
@@ -67,7 +67,7 @@
 @define-color fg0       #282828;
 @define-color orange1   #d65d0e;
 @define-color orange2   #af3a03;
-
+*/
 
 /*	COLOR BINDS
 	-----------			*/
@@ -87,3 +87,8 @@
 @define-color network           @bg4;
 @define-color audio             @bg3;
 @define-color battery           @bg2;
+
+/* Aggiungi in fondo a ~/.config/waybar/colors/default.css */
+@define-color wofi-bg      @bg1;
+@define-color wofi-input   @bg0_h;
+@define-color wofi-accent  @orange1; /* Accento arancione classico Gruvbox */

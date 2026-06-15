@@ -1,35 +1,19 @@
 {
-    "layer": "top",
-    "position": "top",
-    "height": 30,
-
+    "layer": "bottom",
+    "width": 1000,
     "modules-left": [
-        "hyprland/workspaces",
-        "custom/arrow-right#workspaces",
-        "sway/mode",
-        "sway/window"
+        "pulseaudio",
+        "cava"
     ],
     "modules-center": [
-        "sway/scratchpad",
-        "custom/arrow-left#day",
-        "clock#day",
-        "custom/arrow-left#time",
-        "clock#time",
-        "custom/arrow-right#time",
-        "clock#date",
-        "custom/arrow-right#date",
-        "sway/scratchpad#invisible"
+        "clock",
+        "hyprland/workspaces",
+        "clock#right"
     ],
     "modules-right": [
         "tray",
-        "custom/arrow-left#backlight",
-        "backlight",
-        "custom/arrow-left#network",
         "network",
-        "custom/arrow-left#audio",
         "bluetooth",
-        "pulseaudio",
-        "custom/arrow-left#battery",
         "battery"
     ],
 
@@ -42,115 +26,11 @@
 
 //-----	LEFT MODULES: -----
 
-    "hyprland/workspaces": {
-        "format": "{name}: {icon}",
-        "format-icons": {
-            "1": "",
-            "2": "",
-            "3": "",
-            "4": "",
-            "5": "",
-            "active": "",
-            "default": ""
-        }
-    },
-
-    "sway/mode": {
-        "format": "{}:",
-        "tooltip": false
-    },
-
-    "sway/window": {
-        "format": {},
-        "max-length": 45,
-        "tooltip": false,
-        "rewrite": {
-            "(.*) - Ablaze Floorp": "$1"
-        }
-    },
-
-
-//-----	CENTER MODULES: -----
-
-    "sway/scratchpad": {
-        "format": "{icon} {count}",
-        "show-empty": true,
-        "format-icons": ["󰙏", "󰙏"],
-        "tooltip": true,
-        "tooltip-format": "{app}: {title}"
-    },
-
-    "clock#day": {
-        "format": "{:%A}",
-        "tooltip-format": "Vecka: {:%V}"
-    },
-
-    "clock#time": {
-        "timezone": "Europe/Stockholm",
-        "tooltip-format": "<big>{:%Z %z}</big>\n<small>Swedish time</small>"
-    },
-
-    "clock#date": {
-        "format": "{:%d-%m-%Y}",
-        "tooltip-format": "<big>{calendar}</big>"
-    },
-
-    "sway/scratchpad#invisible": {
-        "format": "{icon} {count}",
-        "show-empty": true,
-        "format-icons": ["󰙏", "󰙏"],
-        "tooltip": true,
-        "tooltip-format": "{app}: {title}"
-    },
-
-
-//-----	RIGHT MODULES: -----
-
-    "tray": {
-        "spacing": 8
-    },
-
-    "backlight": {
-        "format": "{icon}",
-        "format-icons": [
-//            "", // nf-weather-moon_new
-//            "", // nf-weather-moon_alt_waxing_gibbous_6
-            "", // ..
-            "",
-            "",
-//            "",
-            "", // nf-weather-moon_alt_waxing_gibbous_1
-            "", // nf-weather-moon_alt_first_quarter
-            "", // nf-weather-moon_alt_waxing_crescent_6
-//            "", // ..
-            "",
-            "",
-//            "",
-            "", // nf-weather-moon_alt_waxing_crescent_1
-            ""  // nf-weather-moon_full
-        ],
-        "tooltip-format": "{percent}%"
-    },
-
-    "network": {
-        "format": "{ifname}",
-        "format-wifi": "{icon} {essid}",
-        "format-ethernet": "󰈀",
-        "format-disabled": "⚠",
-        "format-disconnected": "󰤮",
-        "tooltip-format": "{ipaddr}",
-        "tooltip-format-wifi": "{ipaddr} via {essid} ({signalStrength}%)",
-        "tooltip-format-ethernet": "{ipaddr}/{cidr}",
-        "tooltip-format-disconnected": "Not connected",
-        "tooltip-format-disabled": "Not abled",
-        "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
-        "on-click": "nm-applet"
-    },
 
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
         "format": "{icon} {volume}%",
-        "format-bluetooth": "{volume}% {icon} {format_source}",
+        "format-bluetooth": "{volume}% {icon}",
         "format-bluetooth-muted": " {icon} {format_source}",
         "format-muted": "󰖁 {format_source}",
         "format-source": "{volume}% ",
@@ -166,6 +46,92 @@
         },
         "tooltip-format": "{volume}%",
         "on-click": "pavucontrol"
+    },
+
+
+
+    "cava": {
+        // "cava_config": "$XDG_CONFIG_HOME/cava/cava.conf",
+        "framerate": 30,
+        "autosens": 0,
+        "sensitivity": 0.01,
+        "bars": 14,
+        "lower_cutoff_freq": 50,
+        "higher_cutoff_freq": 10000,
+        "hide_on_silence": true,
+        // "format_silent": "quiet",
+        "method": "pulse",
+        "source": "auto",
+        "stereo": true,
+        "reverse": false,
+        "bar_delimiter": 0,
+        "monstercat": false,
+        "waves": false,
+        "noise_reduction": 0.17,
+        "input_delay": 2,
+        "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ],
+        "actions": {
+                   "on-click-right": "mode"
+                   }
+    },
+    
+
+
+//-----	CENTER MODULES: -----
+
+    "hyprland/workspaces": {
+        "format": " {name}: {icon}",
+        "format-icons": {
+            "1": "",
+            "2": "",
+            "3": "",
+            "4": "",
+            "5": "",
+            "active": "",
+            "default": ""
+        }
+    },
+
+    "clock": {
+        "format": "{:%H}"
+    },
+
+    "clock#right": {
+        "format": "{:%M}"
+    },
+
+
+//-----	RIGHT MODULES: -----
+
+    "tray": {
+        "spacing": 8
+    },
+
+    "network": {
+        "format": "{ifname}",
+        "format-wifi": "{icon}",
+        "format-ethernet": "󰈀",
+        "format-disabled": "⚠",
+        "format-disconnected": "󰤮",
+        "tooltip-format": "{ipaddr}",
+        "tooltip-format-wifi": "{ipaddr} via {essid} ({signalStrength}%)",
+        "tooltip-format-ethernet": "{ipaddr}/{cidr}",
+        "tooltip-format-disconnected": "Not connected",
+        "tooltip-format-disabled": "Not abled",
+        "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
+        "on-click": "nm-applet"
+    },
+
+    "bluetooth": {
+        "format": "",
+        "format-connected": " {device_alias}",
+        "format-connected-battery": " {device_battery_percentage}%",
+                // "format-device-preference": [ "device1", "device2" ], // preference list deciding the displayed device
+        "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
+        "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
+        "on-click": "blueman-manager"
     },
 
     "battery": {
@@ -210,59 +176,6 @@
         "format-charging-below90": "󰂊",
         "format-charging-below100": "󰂋",
         "tooltip-format-charging": "Time to full: {time}\nCurrently at: {capacity}%"
-    },
 
-    "bluetooth": {
-        "format": " {status}",
-        "format-connected": " {device_alias}",
-        "format-connected-battery": " {device_alias} {device_battery_percentage}%",
-                // "format-device-preference": [ "device1", "device2" ], // preference list deciding the displayed device
-        "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
-        "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
-        "tooltip-format-enumerate-connected": "{device_alias}\t{device_address}",
-        "tooltip-format-enumerate-connected-battery": "{device_alias}\t{device_address}\t{device_battery_percentage}%",
-        "on-click": "blueman-manager"
     },
-
-
-//	ARROWS
-//	------
-
-    "custom/arrow-right#workspaces": {
-        "format": "",
-        "tooltip": false
-    },
-    "custom/arrow-right#time": {
-        "format": "",
-        "tooltip": false
-    },
-    "custom/arrow-right#date": {
-        "format": "",
-        "tooltip": false
-    },
-
-    "custom/arrow-left#day": {
-        "format": "",
-        "tooltip": false
-    },
-    "custom/arrow-left#time": {
-        "format": "",
-        "tooltip": false
-    },
-    "custom/arrow-left#backlight": {
-        "format": "",
-        "tooltip": false
-    },
-    "custom/arrow-left#network": {
-        "format": "",
-        "tooltip": false
-    },
-    "custom/arrow-left#audio": {
-        "format": "",
-        "tooltip": false
-    },
-    "custom/arrow-left#battery": {
-        "format": "",
-        "tooltip": false
-    }
 }

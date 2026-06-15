@@ -1,215 +1,84 @@
 @import "colore-attuale.css";
 
 
-/*      ELEMENT SETTINGS
-	----------------	*/
-.modules-left > widget:first-child > #workspaces {margin: 0}
-.modules-right > widget:last-child > #workspaces {margin: 0}
-
 * {
-    font-family: Symbols Nerd Font Mono, VictorMono Nerd Font;
-    font-size: 12;
-    color: @text-main;
-    background-color: @waybar;
-    border: none;
-    border-radius: 0;
-    min-height: 0;
-    margin: 0;
-    padding: 0;
-    box-shadow: none;
-    text-shadow: none;
-    icon-shadow: none;
+    font-family: "JetBrainsMono Nerd Font Mono", VictorMono Nerd Font;
+    all: unset;
+}
+window#waybar {
+    background-color: @bg0;
+    color: @fg;
+    border-radius: 0 0 10px 10px;
 }
 
-workspaces button label,
-#window,
-widget label,
-#tray {
-    padding: 0 .5em;
+#workspaces {
+    min-width: 100px;
+    font-size: 0.4rem;
+    padding: 2px 4px;
+    margin: 11px;
+    border-radius: 99px;
 }
 
-
-/*	ANIMATION		
-	---------		*/
-@keyframes text-blink {
-    to {
-        color: @text-alert;
-    }
-}
-
-@keyframes gradient-blink {
-    from {
-        color: @text-alert;
-        background: linear-gradient(to right, @battery 100%, @alert);
-    }
-    to {
-        color: @text-opposite;
-        background: linear-gradient(to right, @battery 15%, @alert);
-    }
-}
-
-/* Attention */
-#mode,
-#battery.below20.discharging {
-    animation-name: text-blink;
-    animation-duration: 0.5s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
-#battery.below20.discharging {
-    color: transparent
-}
-
-/* Warning */
-#pulseaudio.muted,
-#network.disconnected/*,
-#battery.below20.discharging*/ {
-    color: @text-alert;
-}
-
-/* Critical */
-#battery.below10.discharging {
-    animation-name: gradient-blink;
-    animation-duration: .75s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
-
-
-/*	LEFT MODULES
-	------------		*/
-#workspaces button label {
-    background: @workspaces;
-}
-#workspaces button:hover label {
-    transition: background-color .5s;
-    background: radial-gradient( @workspaces-hover, @workspaces 60%);
-}
-#workspaces button.urgent {
-    transition: background-color .5s;
-    background: radial-gradient( @alert, @workspaces 80%);
-    transition: color .5s;
-    color: @text-alert;
-}
-
-#mode {
-    font-style: italic;
-    font-weight: bold;
-    padding: 0;
-    margin: 0 .5em;
+#workspaces button {
+    background-color: @bg4;
+    /*background-color: whitesmoke;*/
     color: transparent;
-    background-color: @waybar;
-    box-shadow:
-	0 .2em @alert inset,
-	0 -.2em @alert inset;
+    padding: 0px 5px;
+    border-radius: 99px;
+    margin: 0 2px;
+    min-width: 4px;
 }
 
+#workspaces button.active {
+    /*background-color: @blue;*/
+    background-color: whitesmoke;
+    min-width: 1.2rem;
+    transition: all 200ms ease-in-out;
 
-/*	CENTER MODULES
-	--------------		*/
-#scratchpad.empty {
-    color: @waybar;
-}
-
-#clock {
-    color: @text-opposite;
-}
-#clock.day {
-    background-color: @day;
-}
-#clock.time {
-    background-color: @time;
-}
-#clock.date {
-    background-color: @day;
 }
 
-#scratchpad.invisible {
-    color: @waybar;
+#clock,
+#clock#right {
+    margin: 0 15px;
+    font-weight: 700;
+    font-size: 1.12rem;
 }
 
-
-/*	RIGHT MODULES
-	-------------		*/
-
-#tray {
-    background-color: @bg;
-}
-#tray > .passive {
-    -gtk-icon-effect: dim;
-}
-#tray > .needs-attention {
-    -gtk-icon-effect: highlight;
+.modules-left {
+    margin-left: 12px;
 }
 
-#backlight {
-    background-color: @backlight;
+.modules-right {
+    margin-right: 12px;
 }
 
 #network {
-    background-color: @network;
+    /*padding-right: 20px;*/
+    background-color: @bg1;
+    border-radius: 99px;
+    padding: 0px 15px;
+    margin-right: 10px;
 }
 
-#pulseaudio {
-    background-color: @audio;
+#bluetooth {
+    padding-right: 20px;
+    background-color: @bg1;
+    border-radius: 99px;
+    padding: 0 15px;
+    margin-right: 10px;
 }
 
 #battery {
-    background-color: @battery;
-}
-#battery.charging {
-    background: linear-gradient(to right, @battery 30%, @ok);
-}
-#battery.discharging {
-    background: linear-gradient(to right, @battery 30%, @alert);
+    padding-left: 20px;
+    background-color: @bg1;
+    border-radius: 99px;
+    padding: 0 15px;
 }
 
 
-/*	ARROWS
-	------			*/
-#custom-arrow-right,
-#custom-arrow-left {
-    padding: 0;
-    font-family: Hack Nerd Font Mono;
-    font-size: 1.4em;
+#cava {
+    margin: 0 12px;
+    font-size: 0.7rem;
+    letter-spacing: 1px;
 }
 
-#custom-arrow-right.workspaces {
-    color: @workspaces;
-    background-color: transparent;
-}
-#custom-arrow-right.time {
-    color: @time;
-    background-color: @date;
-}
-#custom-arrow-right.date {
-    color: @date;
-    background-color: transparent;
-}
-
-#custom-arrow-left.battery {
-    color: @battery;
-    background-color: @audio;
-}
-#custom-arrow-left.audio {
-    color: @audio;
-    background-color: @network;
-}
-#custom-arrow-left.network {
-    color: @network;
-    background-color: @backlight;
-}
-#custom-arrow-left.backlight {
-    color: @backlight;
-    background-color: transparent;
-}
-#custom-arrow-left.time {
-    color: @time;
-    background-color: @day;
-}
-#custom-arrow-left.day {
-    color: @day;
-    background-color: transparent;
-}
