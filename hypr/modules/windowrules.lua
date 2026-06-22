@@ -38,3 +38,9 @@ end
 for w = 5, 10 do
     hl.workspace_rule({ workspace = tostring(w), monitor = "HDMI-A-1"})
 end
+
+hl.layer_rule({
+	name = "notification-animations",
+	match = { namespace = "swaync-control-center" },
+	animation = "slide top"
+})

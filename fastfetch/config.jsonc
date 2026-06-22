@@ -41,7 +41,10 @@
       "type": "terminal",
       "key": " Terminal"
     },
-    "terminalfont",
+    {
+      "type": "terminalfont",
+      "key": " Font:"
+    },
     "break",
     "separator",
         {
@@ -49,14 +52,24 @@
       "key":  "Hardware"
     },
     "break",
-    "cpu",
-    "memory",
+    {
+      "type": "cpu",
+      "key": " CPU"
+    },
+    {
+      "type": "memory",
+      "key": " RAM"
+
+    },
     "separator",
         {
       "type": "custom", //Permette di creare moduli propri
       "key":  "Network"
     },
-    "localip",
+    {
+      "type": "localip",
+      "key": " IP:"
+    },
     "publicip",
     "break",
     "colors"

@@ -6,3 +6,6 @@ source /usr/share/cachyos-fish-config/cachyos-config.fish
 #    # smth smth
 #end
 starship init fish | source
+
+# Added by Antigravity CLI installer
+set -gx PATH "/home/penna/.local/bin" $PATH

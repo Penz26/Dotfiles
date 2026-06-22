@@ -92,3 +92,16 @@
 @define-color wofi-bg      @bg1;
 @define-color wofi-input   @bg0_h;
 @define-color wofi-accent  @orange1; /* Accento arancione classico Gruvbox */
+
+
+/* Swaync colors */
+@define-color background              @bg0_h;
+@define-color background-alt          @bg2;
+@define-color center-bg               @bg1;
+@define-color center-notification-bg   @bg2;
+@define-color notification-bg         @bg1;
+@define-color text                    @fg;
+@define-color text-alt                @gray1;
+@define-color hover                   @bg3;
+@define-color selected                @orange1;
+@define-color urgent                  @red1;

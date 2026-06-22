@@ -8,7 +8,8 @@ THEMES_DIR="$WAYBAR_DIR/colors"             # Modificato in /colors
 LINK_DESTINAZIONE="$WAYBAR_DIR/colore-attuale.css"
 WOFI_LINK="$HOME/.config/wofi/colore-attuale.css"
 DEFAULT_THEME="$THEMES_DIR/default.css"     # Fallback se manca il tema specifico
-
+SWAYNC_LINK="$HOME/.config/swaync/colore-attuale.css" # Variabile SwayNC mantenuta
+CURRENT_WP=$(awww query | grep -o "/.*") #Trova il wallpaper attuale, con grep invece limitiamo l'output solo al path della foto usata
 
 # 1. Controlla se la cartella Scaricati esiste
 if [ ! -d "$WALLPAPER_DIR" ]; then
@@ -22,17 +23,31 @@ if ! pgrep -x "awww-daemon" > /dev/null; then
     sleep 0.5
 fi
 
-# 3. Pesca uno sfondo a caso da ~/Scaricati
-RANDOM_WALLPAPER=$(find "$WALLPAPER_DIR" -type f \( -name "*.png" -o -name "*.jpg" -o -name "*.jpeg" -o -name "*.webp" \) | shuf -n 1)
+# 3. Pesca uno sfondo a caso da ~/Scaricati e poi controlla se è uguale a quello già in uso ed in caso ne ripesca uno finchè non è diverso
 
-if [ -z "$RANDOM_WALLPAPER" ]; then
-    echo "Nessuno sfondo trovato in $WALLPAPER_DIR"
-    exit 1
-fi
+RANDOM_WALLPAPER=$(find "$WALLPAPER_DIR" -type f \( -name "*.png" -o -name "*.jpg" -o -name "*.jpeg" -o -name "*.webp" \) | shuf -n 1) 
+#inizializziamo la variabile almeno una volta perchè deve essere prima inizializzata per fare il confronto dopo 
+
+while [ "$CURRENT_WP" == "$RANDOM_WALLPAPER" ]; do
+	RANDOM_WALLPAPER=$(find "$WALLPAPER_DIR" -type f \( -name "*.png" -o -name "*.jpg" -o -name "*.jpeg" -o -name "*.webp" \) | shuf -n 1)
+
+	if [ -z "$RANDOM_WALLPAPER" ]; then
+	    echo "Nessuno sfondo trovato in $WALLPAPER_DIR"
+	    exit 1
+	fi
+done
+
+#RANDOM_WALLPAPER=$(find "$WALLPAPER_DIR" -type f \( -name "*.png" -o -name "*.jpg" -o -name "*.jpeg" -o -name "*.webp" \) | shuf -n 1)
+
+#if [ -z "$RANDOM_WALLPAPER" ]; then
+#    echo "Nessuno sfondo trovato in $WALLPAPER_DIR"
+#    exit 1
+#fi
+
 
 # 4. Applica lo sfondo con awww
 awww img "$RANDOM_WALLPAPER" \
-    --transition-type "wave" \
+    --transition-type "random" \
     --transition-angle 30 \
     --transition-step 90 \
     --transition-fps 144
@@ -53,16 +68,40 @@ FILE_TEMA="$THEMES_DIR/$THEME_NAME.css"
 if [ -f "$FILE_TEMA" ]; then
     ln -sf "$FILE_TEMA" "$LINK_DESTINAZIONE"
     ln -sf "$FILE_TEMA" "$WOFI_LINK"
+    ln -sf "$FILE_TEMA" "$SWAYNC_LINK"
     echo "Tema abbinato applicato: colors/$THEME_NAME.css"
 elif [ -f "$DEFAULT_THEME" ]; then
     ln -sf "$DEFAULT_THEME" "$LINK_DESTINAZIONE"
     ln -sf "$DEFAULT_THEME" "$WOFI_LINK"
+    ln -sf "$DEFAULT_THEME" "$SWAYNC_LINK"
     echo "Tema specifico non trovato in /colors. Applicato default.css"
 else
     echo "Avviso: Nessun tema specifico o di default trovato in $THEMES_DIR."
 fi
 
 # 7. Aggiorna Waybar all'istante senza riavviarla
-if pgrep -x "waybar" > /dev/null; then
+# Diamo un attimo di respiro (0.2 secondi) al file system
+sleep 0.2
+
+#Verifichiamo se risponde ai segnali standard
+if killall -0 waybar 2> /dev/null; then
+    # Se è attiva e risponde, ricarica lo stile in sicurezza
     killall -SIGUSR2 waybar
+else
+    
+	killall -9 waybar 2>/dev/null
+
+	sleep 0.2
+
+	#Avviamo waybar in background ma mandiamo il suo output inutile nel buco nero /dev/null
+    waybar > /dev/null 2>&1 &
+    echo "Waybar era chiusa o crashata. Fatta risorgere in background."
 fi
+
+# Invia il segnale di ricarica dello stile a SwayNC
+if pgrep -x "swaync" > /dev/null; then
+    swaync-client -rs
+fi
+
+#Dopo aver aggiornato il tema generale mandiamo una notifica
+notify-send "Cambiato tema generale in $THEME_NAME"

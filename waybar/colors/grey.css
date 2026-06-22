@@ -55,3 +55,15 @@
 @define-color wofi-bg      @bg0_h;
 @define-color wofi-input   @bg1;
 @define-color wofi-accent  @gray1;
+
+/* Swaync colors */
+@define-color background              @bg0_h;
+@define-color background-alt          @bg2;
+@define-color center-bg               @bg1;
+@define-color center-notification-bg   @bg2;
+@define-color notification-bg         @bg1;
+@define-color text                    @fg;
+@define-color text-alt                @gray2;
+@define-color hover                   @bg3;
+@define-color selected                @gray1;
+@define-color urgent                  @red1;

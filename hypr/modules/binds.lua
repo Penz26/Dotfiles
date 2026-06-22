@@ -8,6 +8,7 @@ local fileManager = "dolphin"
 local menu        = "wofi --show drun --show-icons"
 local lock = "~/.config/hypr/scripts/lock.sh"
 local wp_switcher = "~/Scrivania/wp_switcher.sh"
+local nc = "swaync-client -t"
 
 
 ---------------------
@@ -28,6 +29,7 @@ hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit"))    -- dwindle only
 hl.bind(mainMod .. "+L", hl.dsp.exec_cmd(lock)) --blocca il computer usando hyprlock
 hl.bind(mainMod .. "+C", hl.dsp.exec_cmd(wp_switcher))
+hl.bind(mainMod .. "+D", hl.dsp.exec_cmd(nc))
 
 -- Move focus with mainMod + arrow keys
 hl.bind(mainMod .. " + left",  hl.dsp.focus({ direction = "left" }))

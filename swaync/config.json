@@ -1,0 +1,74 @@
+{
+    "$schema": "/etc/xdg/swaync/configschema.json",
+    "positionX": "center",
+    "positionY": "top",
+    "cssPriority": "user",
+    "control-center-width": 450,
+    "fit-to-screen": false,
+
+    "notification-window-width": 400,
+    "notification-window-height": 500,
+    "notification-icon-size": 40,
+    "notification-body-image-height": 500,
+    "notification-body-image-width": 500,
+    "notification-inline-replies": true,
+    "notification-2fa-action": false,
+  
+    "timeout": 3,
+    "timeout-low": 2,
+    "timeout-critical": 6,
+    
+    "keyboard-shortcuts": true,
+    "image-visibility": "when-available",
+    "transition-time": 200,
+    "hide-on-clear": false,
+    "hide-on-action": false,
+    "script-fail-notify": true,
+
+    "widgets": [
+      "mpris",
+      "dnd",
+      "notifications",
+      "title",
+      "buttons-grid"
+    ],
+   
+    "widget-config": {
+        "dnd": {
+            "text": "Do not disturb"
+        },
+
+        "mpris": {
+            "image-size": 100,
+            "image-radius": 10,
+            "autohide": false,
+            "blacklist": [ "org.mpris.MediaPlayer2.playerctld"]
+        },
+
+        "buttons-grid": {
+            "buttons-per-row": 5,
+            "actions": [
+                {
+                    "label": "⏻",
+                    "command": "systemctl poweroff"
+                },
+                {
+                    "label": "",
+                    "command": "systemctl restart"
+                },
+                {
+                    "label": "",
+                    "command": "powerprofilesctl set balanced && notify-send -a 'Sistema' -i 'power-profile-balanced-symbolic' 'Profilo Energetico' 'Modalità Bilanciata attivata'"
+                },
+                {
+                    "label": "",
+                    "command": "powerprofilesctl set performance && notify-send -a 'Sistema' -i 'power-profile-performance-symbolic' 'Profilo Energetico' 'Modalità Performance attivata'"
+                },
+                {
+                    "label": "󰌪",
+                    "command": "powerprofilesctl set power-saver && notify-send -a 'Sistema' -i 'power-profile-power-saver-symbolic' 'Profilo Energetico' 'Modalità Risparmio Energetico attivata'"
+                }
+            ]
+        }
+    }
+  }

@@ -55,3 +55,15 @@
 @define-color wofi-bg      @bg0_h; /* Struttura crema caldo */
 @define-color wofi-input   @bg1;
 @define-color wofi-accent  @purple1; /* Accento Lavanda profondo (super rilassante!) */
+
+/*Swaync colors*/
+@define-color background              @bg0_h;
+@define-color background-alt          @bg2;
+@define-color center-bg               @bg1;
+@define-color center-notification-bg   @bg2;
+@define-color notification-bg         @bg1;
+@define-color text                    @fg;
+@define-color text-alt                @gray1;
+@define-color hover                   @bg3;
+@define-color selected                @purple1;
+@define-color urgent                  @red1;

@@ -3,7 +3,6 @@
 
 * {
     font-family: "JetBrainsMono Nerd Font Mono", VictorMono Nerd Font;
-    all: unset;
 }
 window#waybar {
     background-color: @bg0;
@@ -20,6 +19,7 @@ window#waybar {
 }
 
 #workspaces button {
+    all: unset;
     background-color: @bg4;
     /*background-color: whitesmoke;*/
     color: transparent;
