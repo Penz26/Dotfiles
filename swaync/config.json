@@ -50,11 +50,11 @@
             "actions": [
                 {
                     "label": "⏻",
-                    "command": "systemctl poweroff"
+                    "command": "notify-send 'Sto spegnendo il Pc' && sleep 3.0 && systemctl poweroff"
                 },
                 {
                     "label": "",
-                    "command": "systemctl restart"
+                    "command": "notify-send 'Riavvio il Pc'&& sleep 3.0 && reboot"
                 },
                 {
                     "label": "",
