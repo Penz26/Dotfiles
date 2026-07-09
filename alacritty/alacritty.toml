@@ -1,6 +1,9 @@
+import = [
+	"~/.config/alacritty/themes/kanagawa_wave.toml"
+]
 general.live_config_reload = true
 [window]
-decorations = "None"
+decorations = "Full"
 dynamic_padding = false
 opacity = 0.8
 
@@ -12,17 +15,17 @@ y = 20
 size = 13.0
 
 [font.normal]
-family = "JetBrainsMono Nerd Font Mono"
+family = "JetBrainsMono Nerd Font"
 style = "Regular"
 
 [font.bold]
-family = "JetBrainsMono Nerd Font Mono"
+family = "JetBrainsMono Nerd Font"
 style = "Heavy"
 
 [font.bold_italic]
-family = "JetBrainsMono Nerd Font Mono"
+family = "JetBrainsMono Nerd Font"
 style = "Heavy Italic"
 
 [font.italic]
-family = "JetBrainsMono Nerd Font Mono"
+family = "JetBrainsMono Nerd Font"
 style = "Medium Italic"

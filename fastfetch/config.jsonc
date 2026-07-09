@@ -70,7 +70,7 @@
       "type": "localip",
       "key": " IP:"
     },
-    "publicip",
+    // "publicip",
     "break",
     "colors"
   ]
