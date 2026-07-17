@@ -48,8 +48,6 @@
         "on-click": "pavucontrol"
     },
 
-
-
     "cava": {
         // "cava_config": "$XDG_CONFIG_HOME/cava/cava.conf",
         "framerate": 30,
@@ -74,6 +72,7 @@
                    "on-click-right": "mode"
                    }
     },
+
     
 
 

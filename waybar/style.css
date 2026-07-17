@@ -58,6 +58,7 @@ window#waybar {
     border-radius: 99px;
     padding: 0px 15px;
     margin-right: 10px;
+    font-size: 24px;
 }
 
 #bluetooth {
@@ -66,6 +67,7 @@ window#waybar {
     border-radius: 99px;
     padding: 0 15px;
     margin-right: 10px;
+    font-size: 18px;
 }
 
 #battery {

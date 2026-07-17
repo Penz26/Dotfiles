@@ -3,4 +3,4 @@ no_actions=true
 hide_scroll=true
 width=45%
 height=40%
-term=kitty
+terminal=kitty

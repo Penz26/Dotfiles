@@ -4,12 +4,13 @@
 
 -- Set programs that you use
 local terminal = "kitty"
-local fileManager = "dolphin"
-local menu = "wofi --show drun --show-icons --term kitty"
+local fileManager = "kitty -e yazi"
+local menu = "wofi --show drun --show-icons --terminal=kitty"
 local lock = "~/.config/hypr/scripts/lock.sh"
-local wp_switcher = "~/Scrivania/wp_switcher.sh"
+--local wp_switcher = "~/Scrivania/wp_switcher.sh"
 local nc = "swaync-client -t"
 local UI = "python ~/Scrivania/UI-switcher.py"
+local screenshoot = "hyprshot -m region ~/Immagini/"
 
 ---------------------
 ---- KEYBINDINGS ----
@@ -33,6 +34,7 @@ hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit")) -- dwindle only
 hl.bind(mainMod .. "+L", hl.dsp.exec_cmd(lock)) --blocca il computer usando hyprlock
 hl.bind(mainMod .. "+C", hl.dsp.exec_cmd(UI))
 hl.bind(mainMod .. "+D", hl.dsp.exec_cmd(nc))
+hl.bind(mainMod .. "+K", hl.dsp.exec_cmd(screenshoot))
 
 -- Move focus with mainMod + arrow keys
 hl.bind(mainMod .. " + left", hl.dsp.focus({ direction = "left" }))

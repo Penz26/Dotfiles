@@ -14,11 +14,7 @@
       "type": "os",
       "key": " Sistema Operativo"
     },
-    //"host", "Nome del Pc"
-    {
-      "type": "kernel",
-      "key": ""
-    },
+    //"host", "Nome del Pc,
     "break",
     "separator",
     //"packages", "Pacchetti disponibili con pacman"
@@ -66,6 +62,7 @@
       "type": "custom", //Permette di creare moduli propri
       "key":  "Network"
     },
+    "break",
     {
       "type": "localip",
       "key": " IP:"
