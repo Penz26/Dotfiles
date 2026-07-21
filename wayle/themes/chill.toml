@@ -1,0 +1,15 @@
+# ~/.config/wayle/themes/chill.toml
+
+bg = "#f4f1ea"
+surface = "#dfd9c8"
+elevated = "#d2caa7"
+
+fg = "#2b3531"
+fg_muted = "#8a9597"
+
+primary = "#685373"
+
+red = "#c85a53"
+yellow = "#b58d3d"
+green = "#4a7c59"
+blue = "#3b6b88"

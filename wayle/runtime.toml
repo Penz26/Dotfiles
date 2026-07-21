@@ -1,0 +1,93 @@
+[bar]
+bg = "transparent"
+rounding = "full"
+button-bg-opacity = 80
+button-rounding = "md"
+
+[[bar.layout]]
+monitor = "*"
+show = true
+left = [
+    "dashboard",
+    "cava",
+    "separator",
+    "volume",
+    "separator",
+    "media",
+]
+center = [
+    "clock",
+    "hyprland-workspaces",
+    "notifications",
+]
+right = [
+    "network",
+    "bluetooth",
+    "battery",
+]
+
+[styling.palette]
+fg-muted = "#5a5b5c"
+
+[modules.battery]
+border-color = "fg-default"
+icon-bg-color = "fg-default"
+label-color = "fg-default"
+
+[modules.bluetooth]
+border-color = "fg-default"
+icon-bg-color = "fg-default"
+label-color = "fg-default"
+
+[modules.cava]
+color = "fg-default"
+border-color = "fg-default"
+
+[modules.clock]
+format = "%H:%M "
+border-color = "fg-default"
+icon-show = false
+icon-bg-color = "fg-default"
+label-color = "fg-default"
+
+[modules.dashboard]
+border-color = "fg-default"
+icon-bg-color = "fg-default"
+
+[modules.hyprland-workspaces]
+app-icons-show = true
+icon-gap = 0.0
+active-color = "fg-default"
+
+[modules.media]
+icon-type = "spinning-disc"
+label-show = false
+
+[modules.microphone]
+border-color = "fg-default"
+icon-bg-color = "fg-default"
+label-color = "fg-default"
+
+[modules.network]
+icon-bg-color = "fg-default"
+label-color = "fg-default"
+
+[modules.notifications]
+popup-position = "top-center"
+
+[modules.power]
+border-color = "fg-default"
+icon-bg-color = "fg-default"
+
+[modules.volume]
+border-color = "fg-default"
+icon-bg-color = "fg-default"
+label-color = "fg-default"
+scroll-up = "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+"
+scroll-down = "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
+
+[modules.weather]
+location = "Volta Mantovana"
+
+[wallpaper]
+engine-enabled = false

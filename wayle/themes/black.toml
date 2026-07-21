@@ -1,0 +1,15 @@
+# ~/.config/wayle/themes/black.toml
+
+bg = "#1d1f21"
+surface = "#282a2e"
+elevated = "#373b41"
+
+fg = "#e0e0e0"
+fg_muted = "#5a5b5c"
+
+primary = "#81a2be"
+
+red = "#cc6666"
+yellow = "#de935f"
+green = "#b5bd68"
+blue = "#81a2be"

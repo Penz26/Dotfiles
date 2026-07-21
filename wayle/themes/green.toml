@@ -1,0 +1,19 @@
+# ~/.config/wayle/themes/forest-emerald.toml
+
+# Sfondi principali e layer
+bg = "#141c18"        # Derivato da @bg / @bg0
+surface = "#1d2822"   # Derivato da @bg1
+elevated = "#26342c"  # Derivato da @bg2
+
+# Testo e primo piano
+fg = "#e0e2e4"        # Derivato da @fg / @fg1
+fg_muted = "#7a8c82"  # Derivato da @gray1 / @text-alt
+
+# Colore d'accento principale
+primary = "#70b47b"   # Derivato da @green1 / @workspaces / @ok
+
+# Palette dei colori base
+red = "#e06c75"       # Derivato da @red1 / @text-alert
+yellow = "#e5c07b"    # Derivato da @yellow1
+green = "#70b47b"     # Derivato da @green1
+blue = "#61afef"      # Derivato da @blue1

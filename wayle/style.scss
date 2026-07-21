@@ -1,0 +1,26 @@
+@import "colors"; // Importa automaticamente _colors.scss e il tuo colore-attuale.css
+
+// Stile della barra principale
+window#wayle-bar {
+    background-color: $background;
+    color: $on-background;
+}
+
+// Spazi di lavoro (Workspaces)
+.workspace-button {
+    color: $on-surface-variant;
+    border-radius: 6px;
+    
+    &.active {
+        background-color: $primary;
+        color: $on-primary;
+    }
+}
+
+// Contenitori dei moduli
+.module-box {
+    background-color: $surface;
+    border: 1px solid $outline;
+    border-radius: 8px;
+    padding: 4px 8px;
+}

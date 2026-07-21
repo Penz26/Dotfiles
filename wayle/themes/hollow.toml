@@ -1,0 +1,15 @@
+# ~/.config/wayle/themes/hollow.toml
+
+bg = "#0f131a"
+surface = "#161c26"
+elevated = "#1f2736"
+
+fg = "#dcf2f9"
+fg_muted = "#5c6b73"
+
+primary = "#32527b"
+
+red = "#9e3a3a"
+yellow = "#dbaf37"
+green = "#4a6b53"
+blue = "#32527b"

@@ -1,0 +1,15 @@
+# ~/.config/wayle/themes/blue.toml
+
+bg = "#141824"
+surface = "#1d2234"
+elevated = "#262e44"
+
+fg = "#f8f8f2"
+fg_muted = "#7a828c"
+
+primary = "#61afef"
+
+red = "#e06c75"
+yellow = "#f1fa8c"
+green = "#50fa7b"
+blue = "#61afef"

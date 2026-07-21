@@ -1,0 +1,14 @@
+# Wayle configuration file
+imports = ["./themes/current.toml"]
+
+[styling.palette]
+bg = "#0a0a0a"
+surface = "#121212"
+elevated = "#1e1e1e"
+fg = "#ffffff"
+fg_muted = "#444444"
+primary = "#ffffff"
+red = "#902020"
+yellow = "#909020"
+green = "#209020"
+blue = "#202090"
