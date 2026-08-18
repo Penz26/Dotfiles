@@ -1,14 +1,81 @@
-# Wayle configuration file
-imports = ["./themes/current.toml"]
-
 [styling.palette]
-bg = "#0a0a0a"
-surface = "#121212"
-elevated = "#1e1e1e"
-fg = "#ffffff"
-fg_muted = "#444444"
-primary = "#ffffff"
-red = "#902020"
-yellow = "#909020"
-green = "#209020"
-blue = "#202090"
+primary = "#7ad7c2"
+fg = "#7ad7c2"
+fg-muted = "#aacec3"
+elevated = "#101413"
+
+[modules.dashboard]
+label-color = "#7ad7c2"
+button-bg-color = "#101413"
+icon-color = "#7ad7c2"
+icon-bg-color = "#7ad7c2"
+
+[modules.cava]
+container-bg-color = "#101413"
+icon-color = "#7ad7c2"
+bar-color = "#7ad7c2"
+
+[modules.hyprland-workspaces]
+container-bg-color = "#101413"
+active-color = "#7ad7c2"
+active-bg-color = "#7ad7c2"
+active-fg-color = "#101413"
+inactive-color = "#7ad7c2"
+inactive-bg-color = "#101413"
+
+[modules.systray]
+button-bg-color = "#101413"
+
+[modules.clock]
+label-color = "#7ad7c2"
+button-bg-color = "#101413"
+icon-color = "#101413"
+icon-bg-color = "#7ad7c2"
+
+[modules.battery]
+label-color = "#7ad7c2"
+button-bg-color = "#101413"
+icon-color = "#7ad7c2"
+icon-bg-color = "#7ad7c2"
+
+[modules.bluetooth]
+label-color = "#7ad7c2"
+button-bg-color = "#101413"
+icon-color = "#7ad7c2"
+icon-bg-color = "#7ad7c2"
+
+[modules.network]
+label-color = "#7ad7c2"
+button-bg-color = "#101413"
+icon-color = "#7ad7c2"
+icon-bg-color = "#7ad7c2"
+
+[modules.volume]
+label-color = "#7ad7c2"
+button-bg-color = "#101413"
+icon-color = "#7ad7c2"
+icon-bg-color = "#7ad7c2"
+
+[modules.microphone]
+label-color = "#7ad7c2"
+button-bg-color = "#101413"
+icon-color = "#101413"
+icon-bg-color = "#7ad7c2"
+
+[modules.media]
+label-color = "#7ad7c2"
+button-bg-color = "#101413"
+icon-color = "#7ad7c2"
+icon-bg-color = "#7ad7c2"
+
+[modules.notification]
+label-color = "#7ad7c2"
+button-bg-color = "#101413"
+icon-color = "#7ad7c2"
+icon-bg-color = "#7ad7c2"
+
+[modules.window-title]
+label-color = "#7ad7c2"
+button-bg-color = "#101413"
+icon-color = "#101413"
+icon-bg-color = "#7ad7c2"

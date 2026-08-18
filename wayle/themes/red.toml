@@ -1,15 +1,19 @@
 # ~/.config/wayle/themes/red.toml
 
-bg = "#1e1414"
-surface = "#2c1e1e"
-elevated = "#3c2a2a"
+# Sfondi principali (estrapolati dalle zone d'ombra scure del magma/cristallo)
+bg = "#1a080c"
+surface = "#2b0f15"
+elevated = "#3d1720"
 
-fg = "#f2e5bc"
-fg_muted = "#8c7a7a"
+# Testo e primo piano (rosa/bianco brillante del centro dei cristalli)
+fg = "#fce4ec"
+fg_muted = "#8a5866"
 
-primary = "#e05f5f"
+# Colore d'accento principale (Rosso/Magenta vivido)
+primary = "#ff2a5f"
 
-red = "#e05f5f"
-yellow = "#d8a657"
-green = "#a9b665"
-blue = "#7daea3"
+# Palette dei colori base
+red = "#ff2a5f"        # Rosso/Magenta neon
+yellow = "#ff80ab"     # Rosa brillante
+green = "#00e676"      # Accento verde/iridescente nei riflessi
+blue = "#7c4dff"       # Viola/Ciano elettrico dei riflessi

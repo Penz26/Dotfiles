@@ -196,7 +196,75 @@ class ThemeSelectorApp:
 
         except Exception as e:
             print(f"[ERRORE AGGIORNAMENTO PALETTE WAYLE] {e}")
-            
+
+    def update_hyprland_borders(self, theme_name, theme_toml_path, theme_css_path):
+        """Modifica decorations.lua e lo ri-esegue direttamente tramite hyprctl eval."""
+        active_hex = "889b73"    # Fallback Zenbones
+        inactive_hex = "3a3634"  # Fallback inattivo
+        decorations_file = os.path.expanduser("~/.config/hypr/modules/decorations.lua")
+
+        # 1. Estrazione del colore primario da TOML o CSS
+        if theme_toml_path and os.path.exists(theme_toml_path):
+            try:
+                with open(theme_toml_path, "r") as f:
+                    content = f.read()
+                    match = re.search(r'(?:primary|accent|fg|green|blue)\s*=\s*["\']#([0-9a-fA-F]{6})["\']', content)
+                    if match:
+                        active_hex = match.group(1)
+            except Exception as e:
+                print(f"[ERRORE TOML] {e}")
+
+        elif theme_css_path and os.path.exists(theme_css_path):
+            try:
+                with open(theme_css_path, "r") as f:
+                    content = f.read()
+                    match = re.search(r'@define-color\s+(?:accent|primary|fg|text-main|workspaces)\s+#([0-9a-fA-F]{6})', content)
+                    if match:
+                        active_hex = match.group(1)
+                    else:
+                        all_hexes = re.findall(r'#([0-9a-fA-F]{6})', content)
+                        for h in all_hexes:
+                            if h.lower() not in ["000000", "0a0a0a", "121212"]:
+                                active_hex = h
+                                break
+            except Exception as e:
+                print(f"[ERRORE CSS] {e}")
+
+        # Stringhe formattate per decorations.lua
+        active_color_str = f"rgba({active_hex}ff)"
+        inactive_color_str = f"rgba({inactive_hex}aa)"
+
+        # 2. Scrittura diretta in decorations.lua
+        if os.path.exists(decorations_file):
+            try:
+                with open(decorations_file, "r") as f:
+                    lua_lines = f.readlines()
+
+                new_lines = []
+                for line in lua_lines:
+                    if "active_border" in line and "colors" in line:
+                        new_lines.append(f'            active_border   = {{ colors = {{"{active_color_str}"}}}},\n')
+                    elif "inactive_border" in line:
+                        new_lines.append(f'            inactive_border = "{inactive_color_str}",\n')
+                    else:
+                        new_lines.append(line)
+
+                with open(decorations_file, "w") as f:
+                    f.writelines(new_lines)
+
+            except Exception as e:
+                print(f"[ERRORE SCRITTURA LUA] {e}")
+
+        # 3. Forziamo la ri-esecuzione di decorations.lua tramite eval per il parser Lua
+        try:
+            eval_cmd = f"dofile('{decorations_file}')"
+            subprocess.run(["hyprctl", "eval", eval_cmd], check=True)
+            subprocess.run(["hyprctl", "reload"], check=True)
+            print(f"[BORDINI] Cambiati con successo a #{active_hex}")
+        except Exception as e:
+            print(f"[ERRORE EVAL HYPRLAND] {e}")
+
+
     def apply_theme(self):
         selection = self.listbox.curselection()
         if not selection:
@@ -235,6 +303,8 @@ class ThemeSelectorApp:
         if sorgente_css:
             for link in [WOFI_LINK, SWAYNC_LINK]:
                 self.create_symlink(sorgente_css, link)
+
+        self.update_hyprland_borders(theme_name, sorgente_toml, sorgente_css)
 
         # 5. Ricarica SwayNC
         try:

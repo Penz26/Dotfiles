@@ -1,26 +1,41 @@
-@import "colors"; // Importa automaticamente _colors.scss e il tuo colore-attuale.css
+@import "colors.scss"; // Importa le variabili dinamicamente
 
-// Stile della barra principale
+// --- STILE BARRA PRINCIPALE ---
 window#wayle-bar {
-    background-color: $background;
-    color: $on-background;
+    background-color: $bg;
+    color: $fg;
 }
 
-// Spazi di lavoro (Workspaces)
-.workspace-button {
-    color: $on-surface-variant;
-    border-radius: 6px;
+// --- FIX PER CAVA ---
+#cava, 
+.cava-bar, 
+cava {
+    color: $primary;
+    fill: $primary;
+}
+
+// --- FIX E STILE WORKSPACES (UNIFICATO) ---
+#workspaces,
+.workspaces {
+    background-color: $bg;
     
-    &.active {
-        background-color: $primary;
-        color: $on-primary;
+    .workspace-button {
+        color: $primary;
+        background-color: transparent;
+        border-radius: 6px;
+        padding: 2px 8px;
+        
+        &.active {
+            background-color: $primary;
+            color: $bg;
+            border-radius: 8px;
+        }
     }
 }
 
-// Contenitori dei moduli
+// --- CONTENITORI GENERALI DEI MODULI ---
 .module-box {
     background-color: $surface;
-    border: 1px solid $outline;
     border-radius: 8px;
     padding: 4px 8px;
 }

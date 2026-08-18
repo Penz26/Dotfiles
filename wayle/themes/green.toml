@@ -1,19 +1,19 @@
-# ~/.config/wayle/themes/forest-emerald.toml
+# ~/.config/wayle/themes/green.toml
 
-# Sfondi principali e layer
-bg = "#141c18"        # Derivato da @bg / @bg0
-surface = "#1d2822"   # Derivato da @bg1
-elevated = "#26342c"  # Derivato da @bg2
+# Sfondi principali (ispirati al verde ottanio/smeraldo dello sfondo)
+bg = "#0d2b2a"
+surface = "#143a38"
+elevated = "#1f4b48"
 
-# Testo e primo piano
-fg = "#e0e2e4"        # Derivato da @fg / @fg1
-fg_muted = "#7a8c82"  # Derivato da @gray1 / @text-alt
+# Testo e primo piano (tonalità crema/nuvola)
+fg = "#ebd8c3"
+fg_muted = "#5d7e79"
 
-# Colore d'accento principale
-primary = "#70b47b"   # Derivato da @green1 / @workspaces / @ok
+# Colore d'accento principale (Verde brillante dello sfondo)
+primary = "#16a085"
 
 # Palette dei colori base
-red = "#e06c75"       # Derivato da @red1 / @text-alert
-yellow = "#e5c07b"    # Derivato da @yellow1
-green = "#70b47b"     # Derivato da @green1
-blue = "#61afef"      # Derivato da @blue1
+red = "#e63946"        # Rosso vivido (palloncino sul palo)
+yellow = "#e9c46a"     # Giallo/Arancio warm (chioma alberi)
+green = "#2a9d8f"      # Verde ottanio
+blue = "#457b9d"       # Blu spento cavi/ombre
