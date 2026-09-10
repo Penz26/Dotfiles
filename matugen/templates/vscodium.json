@@ -1,0 +1,31 @@
+{
+    "workbench.colorCustomizations": {
+        "titleBar.activeBackground": "{{colors.surface.default.hex}}",
+        "titleBar.activeForeground": "{{colors.on_surface.default.hex}}",
+        "activityBar.background": "{{colors.surface_container_low.default.hex}}",
+        "activityBar.foreground": "{{colors.primary.default.hex}}",
+        "activityBar.inactiveForeground": "{{colors.outline.default.hex}}",
+        "activityBarBadge.background": "{{colors.primary.default.hex}}",
+        "activityBarBadge.foreground": "{{colors.on_primary.default.hex}}",
+        "sideBar.background": "{{colors.surface_container.default.hex}}",
+        "sideBar.foreground": "{{colors.on_surface.default.hex}}",
+        "sideBarSectionHeader.background": "{{colors.surface_container_high.default.hex}}",
+        "sideBarTitle.foreground": "{{colors.primary.default.hex}}",
+        "editor.background": "{{colors.surface.default.hex}}",
+        "editor.foreground": "{{colors.on_surface.default.hex}}",
+        "editor.lineHighlightBackground": "{{colors.surface_container_highest.default.hex}}33",
+        "editorLineNumber.foreground": "{{colors.outline.default.hex}}",
+        "editorLineNumber.activeForeground": "{{colors.primary.default.hex}}",
+        "editorCursor.foreground": "{{colors.primary.default.hex}}",
+        "editorGroupHeader.tabsBackground": "{{colors.surface_container_low.default.hex}}",
+        "tab.activeBackground": "{{colors.surface.default.hex}}",
+        "tab.activeForeground": "{{colors.primary.default.hex}}",
+        "tab.inactiveBackground": "{{colors.surface_container_low.default.hex}}",
+        "tab.inactiveForeground": "{{colors.on_surface_variant.default.hex}}",
+        "tab.activeBorderTop": "{{colors.primary.default.hex}}",
+        "statusBar.background": "{{colors.surface_container_low.default.hex}}",
+        "statusBar.foreground": "{{colors.on_surface.default.hex}}",
+        "statusBar.debuggingBackground": "{{colors.error.default.hex}}",
+        "statusBar.noFolderBackground": "{{colors.surface_container_low.default.hex}}"
+    }
+}

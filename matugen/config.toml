@@ -1,0 +1,55 @@
+[config]
+
+#[templates.nvim]
+#input_path = '~/.config/matugen/templates/nvim.lua'
+#output_path = '~/.config/nvim/lua/matugen_colors.lua'
+
+#[templates.kitty]
+#input_path = "~/.config/matugen/templates/kitty.conf"
+#output_path = "~/.config/kitty/colors.conf"
+
+#[templates.wofi]
+#input_path = '~/.config/matugen/templates/wofi.css'
+#output_path = '/home/penna/.config/wofi/colore-attuale.css'
+
+#[templates.hyprlock]
+#input_path = '~/.config/matugen/templates/hyprlock.conf'
+#output_path = '~/.config/hypr/hyprlock_colors.conf'
+
+#[templates.wayle]
+#input_path = "~/.config/matugen/templates/wayle.toml"
+#output_path = "~/.config/wayle/config.toml"
+#post_hook = 'pkill -f wayle; wayle panel start &'
+
+#[templates.zen]
+#input_path = '~/.config/matugen/templates/zen-colors.css'
+#output_path = '/home/penna/.cache/zen/s39g8qxw.Default (release)/chrome/userChrome.css'
+
+#[templates.vscodium]
+#input_path = '~/.config/matugen/templates/vscodium.json'
+#output_path = '~/.config/VSCodium/User/settings.json'
+
+#[templates.btop]
+#input_path = '~/.config/matugen/templates/btop.theme'
+#output_path = '~/.config/btop/themes/matugen.theme'
+
+#[templates.matugen-template.qml]
+#input_path = "templates/matugen-template.qml"
+#output_path = "~/.gemini/antigravity/scratch/quickshell-dynamic-island/theme/Theme.qml"
+
+[templates.starship]
+input_path = "templates/starship.toml"
+output_path = "~/.config/starship.toml"
+
+[templates.superfile]
+input_path = "templates/superfile.toml"
+output_path = "~/.config/superfile/theme/adaptive.toml"
+
+[templates.supersonic]
+input_path = "templates/adaptive-supersonic.toml"
+output_path = "~/.config/supersonic/themes/adaptive-supersonic.toml"
+#post_hook = "killall supersonic-desktop && supersonic-desktop &"
+
+[templates.obsidian]
+input_path = '~/.config/matugen/templates/obsidian.css'
+output_path = '~/Scrivania/Progetti-e-cartelle-di-studio-personale/Personale Manuel/docs/.obsidian/snippets/matugen.css'
