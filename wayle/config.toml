@@ -1,81 +1,81 @@
 [styling.palette]
-primary = "#7ad7c2"
-fg = "#7ad7c2"
-fg-muted = "#aacec3"
-elevated = "#101413"
+primary = "#ffb4a9"
+fg = "#ffb4a9"
+fg-muted = "#e7bdb6"
+elevated = "#1a1110"
 
 [modules.dashboard]
-label-color = "#7ad7c2"
-button-bg-color = "#101413"
-icon-color = "#7ad7c2"
-icon-bg-color = "#7ad7c2"
+label-color = "#ffb4a9"
+button-bg-color = "#1a1110"
+icon-color = "#ffb4a9"
+icon-bg-color = "#ffb4a9"
 
 [modules.cava]
-container-bg-color = "#101413"
-icon-color = "#7ad7c2"
-bar-color = "#7ad7c2"
+container-bg-color = "#1a1110"
+icon-color = "#ffb4a9"
+bar-color = "#ffb4a9"
 
 [modules.hyprland-workspaces]
-container-bg-color = "#101413"
-active-color = "#7ad7c2"
-active-bg-color = "#7ad7c2"
-active-fg-color = "#101413"
-inactive-color = "#7ad7c2"
-inactive-bg-color = "#101413"
+container-bg-color = "#1a1110"
+active-color = "#ffb4a9"
+active-bg-color = "#ffb4a9"
+active-fg-color = "#1a1110"
+inactive-color = "#ffb4a9"
+inactive-bg-color = "#1a1110"
 
 [modules.systray]
-button-bg-color = "#101413"
+button-bg-color = "#1a1110"
 
 [modules.clock]
-label-color = "#7ad7c2"
-button-bg-color = "#101413"
-icon-color = "#101413"
-icon-bg-color = "#7ad7c2"
+label-color = "#ffb4a9"
+button-bg-color = "#1a1110"
+icon-color = "#1a1110"
+icon-bg-color = "#ffb4a9"
 
 [modules.battery]
-label-color = "#7ad7c2"
-button-bg-color = "#101413"
-icon-color = "#7ad7c2"
-icon-bg-color = "#7ad7c2"
+label-color = "#ffb4a9"
+button-bg-color = "#1a1110"
+icon-color = "#ffb4a9"
+icon-bg-color = "#ffb4a9"
 
 [modules.bluetooth]
-label-color = "#7ad7c2"
-button-bg-color = "#101413"
-icon-color = "#7ad7c2"
-icon-bg-color = "#7ad7c2"
+label-color = "#ffb4a9"
+button-bg-color = "#1a1110"
+icon-color = "#ffb4a9"
+icon-bg-color = "#ffb4a9"
 
 [modules.network]
-label-color = "#7ad7c2"
-button-bg-color = "#101413"
-icon-color = "#7ad7c2"
-icon-bg-color = "#7ad7c2"
+label-color = "#ffb4a9"
+button-bg-color = "#1a1110"
+icon-color = "#ffb4a9"
+icon-bg-color = "#ffb4a9"
 
 [modules.volume]
-label-color = "#7ad7c2"
-button-bg-color = "#101413"
-icon-color = "#7ad7c2"
-icon-bg-color = "#7ad7c2"
+label-color = "#ffb4a9"
+button-bg-color = "#1a1110"
+icon-color = "#ffb4a9"
+icon-bg-color = "#ffb4a9"
 
 [modules.microphone]
-label-color = "#7ad7c2"
-button-bg-color = "#101413"
-icon-color = "#101413"
-icon-bg-color = "#7ad7c2"
+label-color = "#ffb4a9"
+button-bg-color = "#1a1110"
+icon-color = "#1a1110"
+icon-bg-color = "#ffb4a9"
 
 [modules.media]
-label-color = "#7ad7c2"
-button-bg-color = "#101413"
-icon-color = "#7ad7c2"
-icon-bg-color = "#7ad7c2"
+label-color = "#ffb4a9"
+button-bg-color = "#1a1110"
+icon-color = "#ffb4a9"
+icon-bg-color = "#ffb4a9"
 
 [modules.notification]
-label-color = "#7ad7c2"
-button-bg-color = "#101413"
-icon-color = "#7ad7c2"
-icon-bg-color = "#7ad7c2"
+label-color = "#ffb4a9"
+button-bg-color = "#1a1110"
+icon-color = "#ffb4a9"
+icon-bg-color = "#ffb4a9"
 
 [modules.window-title]
-label-color = "#7ad7c2"
-button-bg-color = "#101413"
-icon-color = "#101413"
-icon-bg-color = "#7ad7c2"
+label-color = "#ffb4a9"
+button-bg-color = "#1a1110"
+icon-color = "#1a1110"
+icon-bg-color = "#ffb4a9"
