@@ -1,0 +1,44 @@
+{
+  "wallpaper": {
+    "postHook": "matugen -m dark --source-color-index 0 image \"$WALLPAPER_PATH\""
+  },
+  "toggles": {
+    "communication": {
+      "whatsapp": {
+        "enable": true,
+        "command": [
+          "whatsapp-linux-desktop"
+        ],
+        "match": [
+          {
+            "class": "WhatsApp Desktop"
+          }
+        ],
+        "move": true
+      },
+      "discord": {
+        "enable": false
+      }
+    },
+    "music": {
+      "sonora": {
+        "enable": true,
+        "command": [
+          "/usr/bin/sonora"
+        ],
+        "match": [
+          {
+            "class": "sonora"
+          }
+        ],
+        "move": true
+      },
+      "spotify": {
+        "enable": false
+      },
+      "feishin": {
+        "enable": false
+      }
+    }
+  }
+}

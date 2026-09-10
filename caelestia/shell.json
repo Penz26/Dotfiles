@@ -1,0 +1,164 @@
+{
+    "appearance": {
+        "transparency": {
+            "base": 0.9,
+            "enabled": false
+        }
+    },
+    "background": {
+        "desktopClock": {
+            "enabled": false,
+            "invertColors": false,
+            "position": "top-right",
+            "scale": 1
+        },
+        "enabled": true,
+        "wallpaperEnabled": true
+    },
+    "bar": {
+        "activeWindow": {
+            "compact": true,
+            "inverted": false,
+            "showOnHover": true
+        },
+        "clock": {
+            "showDate": false,
+            "showIcon": false
+        },
+        "persistent": true,
+        "popouts": {
+            "activeWindow": true
+        },
+        "scrollActions": {
+            "workspaces": true
+        },
+        "showOnHover": true,
+        "statusIcons": [
+            {
+                "enabled": true,
+                "id": "network"
+            },
+            {
+                "enabled": true,
+                "id": "audio"
+            },
+            {
+                "enabled": true,
+                "id": "bluetooth"
+            },
+            {
+                "enabled": true,
+                "id": "battery"
+            }
+        ],
+        "tray": {
+            "background": true,
+            "compact": true,
+            "recolour": true
+        },
+        "workspaces": {
+            "activeIndicator": true,
+            "activeLabel": "",
+            "activeTrail": false,
+            "label": "",
+            "occupiedBg": true,
+            "occupiedLabel": "",
+            "showWindowsOnSpecialWorkspaces": false
+        }
+    },
+    "dashboard": {
+        "dragThreshold": 25,
+        "enabled": true,
+        "mediaUpdateInterval": 100,
+        "resourceUpdateInterval": 1500,
+        "showPerformance": true,
+        "showWeather": true
+    },
+    "general": {
+        "apps": {
+            "explorer": [
+                "thunar"
+            ],
+            "playback": [
+                "/usr/bin/vlc",
+                "--started-from-file"
+            ],
+            "terminal": [
+                "kitty"
+            ]
+        },
+        "mediaGifSpeedAdjustment": 100,
+        "sessionGifSpeed": 0.7
+    },
+    "launcher": {
+        "actionPrefix": ":",
+        "enableDangerousActions": true,
+        "maxShown": 7,
+        "maxWallpapers": 17,
+        "showOnHover": false,
+        "useFuzzy": {
+            "actions": true,
+            "apps": true,
+            "variants": true,
+            "wallpapers": true
+        },
+        "vimKeybinds": true
+    },
+    "notifs": {
+        "defaultExpireTimeout": 4000
+    },
+    "paths": {
+        "mediaGif": "/etc/xdg/quickshell/caelestia/assets/pedro.gif",
+        "sessionGif": "root:/assets/exit.gif"
+    },
+    "services": {
+        "audioIncrement": 0.05,
+        "brightnessIncrement": 0.05,
+        "defaultPlayer": "Sonora",
+        "lyricsBackend": "LRCLIB",
+        "maxVolume": 1,
+        "visualiserBars": 50,
+        "weatherLocation": "Volta Mantovana"
+    },
+    "sidebar": {
+        "dragThreshold": 20,
+        "enabled": true
+    },
+    "utilities": {
+        "quickToggles": [
+            {
+                "enabled": true,
+                "id": "wifi"
+            },
+            {
+                "enabled": true,
+                "id": "bluetooth"
+            },
+            {
+                "enabled": true,
+                "id": "mic"
+            },
+            {
+                "enabled": true,
+                "id": "settings"
+            },
+            {
+                "enabled": true,
+                "id": "gameMode"
+            },
+            {
+                "enabled": true,
+                "id": "dnd"
+            },
+            {
+                "enabled": false,
+                "id": "vpn"
+            }
+        ],
+        "vpn": {
+            "provider": [
+            ],
+            "selectedProvider": ""
+        }
+    }
+}
